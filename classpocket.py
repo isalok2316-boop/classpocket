@@ -1,7 +1,12 @@
 import streamlit as st
 
 st.set_page_config(page_title="ClassPocket", page_icon="🎒", layout="centered")
-
+# Injeção do Manifesto PWA para permitir instalar no telemóvel
+pwa_code = """
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff4b4b">
+"""
+st.markdown(pwa_code, unsafe_allow_html=True)
 st.title("🎒 ClassPocket")
 st.write("A tua aplicação para gerir aulas, testes e trabalhos de forma muito fácil.")
 
